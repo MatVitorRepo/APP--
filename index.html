@@ -1,0 +1,126 @@
+<!-- Estrutura básica do documento HTML -->
+<!-- Início do documento -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Metadados do documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página -->
+    <title>Document</title>
+    <!-- Vínculo com o arquivo de estilo externo -->
+    <link rel="stylesheet" href="./formulario.css">
+    <!-- Vínculo com o arquivo de estilo externo -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Este é um link para importar a fonte "Montserrat" com um peso de 500 do Google Fonts. -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+</head>
+
+
+
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+        <!-- Início da barra de navegação com estilos do Bootstrap. A cor de fundo é definida como "bg-body-tertiary". -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+
+                <!-- Elemento SVG (Scalable Vector Graphics) é usado para criar gráficos vetoriais. -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-globe-americas" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484-.08.08-.162.158-.242.234-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z" />
+                </svg>
+
+                <!-- Link da marca da barra de navegação. Ao clicar, geralmente leva de volta à página inicial. -->
+                <a class="navbar-brand" href="#">Mundivox</a>
+
+                <!-- Botão de alternância para dispositivos móveis. Mostra ou esconde itens do menu quando a tela é pequena. -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Contêiner para os itens do menu de navegação. Ele será escondido em telas pequenas/móveis. -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- Lista não ordenada de itens de navegação. -->
+                    <ul class="navbar-nav">
+                        <!-- Item de menu ativo. Normalmente usado para a página atual ou seção da página. -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <!-- Outros itens de menu de navegação. -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <!-- Item de menu desativado. Não é clicável. -->
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- Seção do formulário -->
+    <section class="formulario">
+        <!-- Contêiner do formulário -->
+        <div class="formulario__container">
+            <!-- Imagem representando a etapa do formulário -->
+            <img src="../img/status-1.png" alt="Etapa um de três" class="formulario__etapas">
+            <!-- Título do formulário -->
+            <h2 class="formulario__titulo-texto">Preencha os campos abaixo para criar sua conta corrente!</h2>
+        </div>
+
+        <!-- Formulário principal -->
+        <form class="principal__formulario" data-formulario>
+            <!-- Campo para o nome -->
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="nome">Nome</label>
+                <input name="nome" id="nome" class="campo__escrita" type="text" minlength="3" required />
+                <span class="mensagem-erro"></span>
+            </fieldset>
+
+            <!-- Campo para o e-mail -->
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="email">E-mail</label>
+                <input name="email" id="email" class="campo__escrita" type="email" minlength="4" required />
+                <span class="mensagem-erro"></span>
+            </fieldset>
+
+            <!-- Campo para o RG -->
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="rg">RG</label>
+                <input name="rg" id="rg" class="campo__escrita campo__escrita--menor" type="text" required />
+                <span class="mensagem-erro"></span>
+            </fieldset>
+
+            <!-- Campo para o CPF -->
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="cpf">CPF (apenas números)</label>
+                <input name="cpf" id="cpf" class="campo__escrita campo__escrita--menor" required type="text"
+                    minlength="11" maxlength="14" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" />
+                <span class="mensagem-erro"></span>
+            </fieldset>
+
+            <!-- Campo para a data de nascimento -->
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="aniversario">Data de nascimento</label>
+                <input name="aniversario" id="aniversario" class="campo__escrita campo__escrita--menor" type="date"
+                    required />
+                <span class="mensagem-erro"></span>
+            </fieldset>
+
+            <!-- Este é um botão HTML com estilo do Bootstrap. Ele cria um botão de contorno azul com o rótulo "Primary". -->
+            <button type="button" class="btn btn-outline-primary">Primary</button>
+
+            <!-- Este é outro botão semelhante ao primeiro, com as mesmas propriedades e estilos. -->
+            <button type="button" class="btn btn-outline-primary">Primary</button>
+</body>

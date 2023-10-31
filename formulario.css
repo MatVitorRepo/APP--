@@ -1,0 +1,273 @@
+/* Reseta as margens, preenchimentos e bordas para todos os elementos HTML */
+/* para garantir consistência nas configurações de estilo */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/*fonte do formulario*/
+
+/* Define variáveis de cor para reutilização */
+:root {
+    --branco: #FFF6F6;
+    --azul: #0C356A;
+    --fonte-pricipal: 'Montserrat', sans-serif;
+}
+
+
+/* Estiliza o formulário */
+.formulario {
+    margin: 3em auto;
+    width: 30vw;
+}
+
+/* Estiliza itens da navegação */
+.breadcrumb li {
+    display: inline;
+    font-size: 16px;
+    color: var(--azul-claro);
+}
+
+/* Estiliza o separador na navegação */
+.breadcrumb li+li:before {
+    padding: 8px;
+    color: var(--azul-claro);
+    content: ">";
+}
+
+/* Estiliza a página atual na navegação */
+.breadcrumb__pagina {
+    font-weight: 700;
+}
+
+/* Estiliza o contêiner do formulário */
+.formulario__container {
+    margin: 3em 0;
+    text-align: center;
+}
+
+/* Estiliza campos do formulário */
+.formulario__campo {
+    margin-bottom: 2em;
+    font-family: var(--fonte-pricipal);
+}
+
+/* Estiliza o título do formulário */
+.formulario__titulo-texto {
+    margin: 1em 0;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    font-family: var(--fonte-pricipal);
+}
+
+/* Estiliza etiquetas dos campos do formulário */
+.campo__etiqueta {
+    font-weight: 500;
+    line-height: 20px;
+    font-family: var(--fonte-pricipal);
+}
+
+/* Estiliza campos de entrada do formulário */
+.campo__escrita {
+    display: block;
+    border: 2px solid var(--azul);
+    border-radius: 20px;
+    width: 100%;
+    padding: 1em;
+    margin-top: .5em;
+}
+
+/* Estiliza campos de entrada menores do formulário */
+.campo__escrita--menor {
+    width: 50%;
+}
+
+/* Estiliza texto dos termos de serviço */
+.termos__texto {
+    line-height: 20px;
+    display: inline;
+}
+
+/* Estiliza botões do formulário */
+.formulario__botao,
+.camera__botao {
+    background: var(--azul);
+    margin: 2em auto;
+    display: block;
+    border: none;
+    padding: 1em 4em;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--branco);
+}
+
+/* Estiliza imagens do formulário */
+.formulario__imagem {
+    display: block;
+    margin: 2em auto;
+}
+
+/* Torna a imagem do formulário invisível */
+.formulario__imagem--invisivel {
+    display: none;
+}
+
+/* Estiliza botões âncora do formulário */
+.formulario__botao--ancora {
+    text-decoration: none;
+    width: 50%;
+}
+
+/* Estiliza texto do formulário */
+.formulario__texto {
+    margin: 1em 8em;
+}
+
+/* Estiliza texto do formulário em negrito */
+.formulario__texto--negrito {
+    font-weight: 700;
+}
+
+/* Estiliza texto secundário do formulário */
+.formulario__texto-secundario {
+    margin: 2em 6em;
+}
+
+/* Estiliza mensagens de erro no formulário */
+.mensagem-erro {
+    color: red;
+}
+
+/* Estiliza campos de entrada com erro no formulário */
+.campo__escrita--erro {
+    border: 2px solid red;
+}
+
+/* Esconde elementos de mensagem e câmera no formulário */
+.formulario__mensagem,
+.formulario__camera {
+    display: none;
+}
+
+/* Exibe elementos de mensagem de sucesso e câmera no formulário */
+.formulario__mensagem--sucesso,
+.formulario__camera--exibir {
+    display: block;
+}
+
+/* Estilos do botão*/
+.botao{
+    background-color: var(--azul);
+}
+
+/* Estilos de reset para diversos elementos HTML */
+@media screen and (max-width: 900px) {
+
+    /* Ajusta a largura do formulário para telas menores */
+    .formulario {
+        width: 70%;
+    }
+
+    /* Ajusta a largura das etapas do formulário para telas menores */
+    .formulario__etapas {
+        width: 100%;
+    }
+
+    /* Ajusta as margens do contêiner principal para telas menores */
+    .container {
+        margin: 2em;
+    }
+}
+
+
+
+
+
+    
